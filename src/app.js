@@ -2,7 +2,7 @@ const express = require("express");
 const path = require('path');
 const hbs = require('hbs');
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 // public static path
 const static_path = path.join(__dirname,"../public");
@@ -30,7 +30,7 @@ app.get("/weather", (req,res)=>{
 })
 app.get("*", (req,res)=>{
     res.render('404error',{
-        errorMsg:"Oops! Page Not Found,click to go back" 
+        errorMsg:"Oops! Page Not Found,click  here to go back" 
     });
 });
 
