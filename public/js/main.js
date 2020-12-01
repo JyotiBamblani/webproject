@@ -4,6 +4,7 @@ const submitBtn = document.getElementById('submitBtn');
 const city_name = document.getElementById('city_name');
 const temp_real_val = document.getElementById('temp_real_val');
 const temp_status = document.getElementById('temp_status');
+const date = document.getElementById("date");
 const datahide = document.querySelector('.middle_layer');
 
 const getInfo = async(event) => {
