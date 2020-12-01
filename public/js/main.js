@@ -14,17 +14,17 @@ const getInfo = async(event) =>{
      let cityVal = cityName.value;
    if(cityVal === ""){
        city_name.innerText = `Plz enter text before searching`;
-       datahide.classList.add(' data_hide');
+    //    datahide.classList.add(' data_hide');
    }else{
        try{
-        let url =` http://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=c98d4d1d431236a91dc8bf90c0c3f7a6`;
+        let url =`http://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=c98d4d1d431236a91dc8bf90c0c3f7a6`;
         const response = await fetch(url);
         const data = await response.json();
         const arrData = [data];
 
         city_name.innerText = `${arrData[0].name}, ${arrData[0].sys.country}`; 
         temp_real_val.innerText = arrData[0].main.temp;
-        //    date.innerText = arrData[0].timezone;
+
         const tempMood = arrData[0].weather[0].main; 
         //condition to check weather
         if(tempMood == "Clear"){
@@ -41,10 +41,10 @@ const getInfo = async(event) =>{
              "<i class='fas fa-sun' style='color:#eccc68;'></i>" 
         }
 
-        datahide.classList.remove('data_hide');
+        // datahide.classList.remove('data_hide');
        }catch{
         city_name.innerText =`Please enter valid city name`;
-        datahide.classList.add(' data_hide');
+        // datahide.classList.add(' data_hide');
        };
 
    };

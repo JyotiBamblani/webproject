@@ -197,7 +197,7 @@ sup{
     margin-top: -2rem;
 }
 .data_hide{
-    visibility: hidden;
+    /* visibility: hidden; */
     transition: all 0.5 s linear;
 }
 /* errorpagesytle */
