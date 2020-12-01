@@ -41,7 +41,7 @@ const getInfo = async(event) =>{
              "<i class='fas fa-sun' style='color:#eccc68;'></i>" 
         }
 
-        datahide.classList.remove('data_hide');
+        // datahide.classList.remove('data_hide');
        }catch{
         city_name.innerText =`Please enter valid city name`;
         datahide.classList.add(' data_hide');
