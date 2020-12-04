@@ -17,7 +17,7 @@ const getInfo = async(event) =>{
        datahide.classList.add(' data_hide');
    }else{
        try{
-        let url =` http://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric,timezone_offset&appid=c98d4d1d431236a91dc8bf90c0c3f7a6`;
+        let url =` http://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=c98d4d1d431236a91dc8bf90c0c3f7a6`;
         const response = await fetch(url);
         const data = await response.json();
         const arrData = [data];
